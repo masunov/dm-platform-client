@@ -1,0 +1,53 @@
+{
+    "name": "mnd/dm-platform-client",
+    "description": "PHP client of Drift Manager Platform API",
+    "type": "library",
+    "keywords": [
+        "api-client",
+        "laravel",
+        "circuit-breaker",
+        "webhooks",
+        "guzzle"
+    ],
+    "license": "proprietary",
+    "require": {
+        "php": "^8.2",
+        "guzzlehttp/guzzle": "^7.8.2 || ^8.0",
+        "psr/simple-cache": "^3.0",
+        "ramsey/uuid": "^4.7"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^11.3",
+        "phpunit/phpunit": "^11.0|^12.0",
+        "squizlabs/php_codesniffer": "^3.7|^4.0"
+    },
+    "suggest": {
+        "illuminate/support": "Laravel integration: DmPlatformServiceProvider and config/dmplatform.php"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mnd\\DmPlatform\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mnd\\DmPlatform\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "lint": "phpcs"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mnd\\DmPlatform\\Laravel\\DmPlatformServiceProvider"
+            ]
+        }
+    }
+}

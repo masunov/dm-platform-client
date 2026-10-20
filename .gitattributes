@@ -1,0 +1,7 @@
+# Only the library goes into the dist archive Composer installs.
+/.gitattributes   export-ignore
+/.gitignore       export-ignore
+/.idea            export-ignore
+/phpcs.xml.dist   export-ignore
+/phpunit.xml.dist export-ignore
+/tests            export-ignore
